@@ -1,0 +1,204 @@
+/*
+	Fonts 
+	'Anton', sans-serif;
+	'Bebas Neue', sans-serif;
+	'Oswald', sans-serif;
+	'Play', sans-serif;
+	'Vina Sans', cursive;
+
+	Colors & Accents
+	#202c44 -- navy blue
+	#ddad55 -- pale orange
+	#f9f9f9 -- offwhite
+	#061022 -- black
+*/
+
+* {
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	font-family: 'Play', sans-serif;
+	text-decoration: none;
+	transition: 0.2s linear;
+	text-transform: uppercase;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+section {
+	padding: 2rem 9%;
+}
+
+/* Header Styles Start */
+.header {
+	padding: 2rem 9%;
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 2;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .logo img {
+	height: 6rem;
+}
+
+.header .navbar #close {
+	display: none;
+	position: absolute;
+	top: 4rem; right: 2rem;
+	color: #f9f9f9;
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+
+.header .navbar a {
+	margin-right: 2rem;
+	color: #f9f9f9;
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+.header .navbar a:hover {
+	color: #ddad55;
+}
+
+.header #menu {
+	display: none;
+	color: #f9f9f9;
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+/* Header Styles End */
+
+
+/* Home Section Styles Start */
+.home {
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.5em;
+	justify-content: center;
+
+	background-color: #202c44;
+}
+.home .content {
+	padding-top: 6.5rem;
+	flex: 1 1 40rem;
+}
+
+.home .content .title {
+	color: #f9f9f9;
+	font-size: 6rem;
+	text-transform: capitalize;
+}
+.home .content .title span {
+	color: #ddad55;
+}
+.home .content .description {
+	padding: 1rem 0;
+	color: #f9f9f9;
+	font-size: 2rem;
+	font-weight: lighter;
+	line-height: 1.8;
+}
+
+.home .content .btn {
+	padding: 0.9rem 3rem;
+	margin-top: 1rem;
+	display: inline-block;
+
+	background-color: #ddad55;
+	color: #061022;
+	cursor: pointer;
+	font-size: 1.7;
+}
+.home .content .btn:hover {
+	letter-spacing: 0.2rem;
+}
+
+.home .image {
+	flex: 1 1 40rem;
+	text-align: center;
+}
+.home .image img {
+	width: 85%;
+}
+/* Home Section Styles End */
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+	html {
+		font-size: 55%;
+	}
+
+	.header {
+		padding: 2rem;
+	}
+
+	section {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	/* Header Styles Start */
+	.header #menu {
+		display: inline-block;
+	}
+
+	.header .navbar {
+		height: 100%;
+		width: 30rem;
+		position: fixed;
+		top: 0; right: -105%;
+
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		background: #202c4433;
+		-webkit-backdrop-filter: blur(50px);
+		backdrop-filter: blur(50px);
+		transition: right 0.5s;
+		z-index: 1200;
+	}
+
+	.header .active {
+		right: 0;
+	}
+
+	.header .navbar #close {
+		display: block;
+	}
+
+	.header .navbar a {
+		margin: 1rem 0;
+		display: block;
+		font-size: 2.5rem;
+		text-align: center;
+	}
+	/* Header Styles End*/
+
+	/* Home Content Styles Start */
+	.home .content {
+		padding-top: 9.5rem;
+	}
+	.home .content .title {
+		font-size: 4rem;
+	}
+	.home .content .description {
+		font-size: 1.6rem;
+	}
+	/* Home Content Styles End */
+}
+
+@media (max-width: 450px) {
+	html {
+		font-size: 50%;
+	}
+}
